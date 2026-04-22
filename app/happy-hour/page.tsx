@@ -38,9 +38,9 @@ const happyHourSpecials = [
 ];
 
 const drinkImages = [
-  { src: "/images/food-2.jpg", alt: "Signature Margaritas" },
-  { src: "/images/drinks-1.jpg", alt: "Craft Cocktails" },
-  { src: "/images/drinks-2.jpg", alt: "Classic Lime Margarita" },
+  { src: "/images/drinks_01.jpg", alt: "Cerveza" },
+  { src: "/images/drinks_02.jpg", alt: "Craft Cerveza" },
+  { src: "/images/drinks_03.jpg", alt: "Classic Lime Margarita" },
 ];
 
 export default function HappyHourPage() {
@@ -92,7 +92,7 @@ export default function HappyHourPage() {
         title="Happy Hour"
         subtitle="Everyday 4-7PM"
         slogan="Unwind with unbeatable drink specials"
-        backgroundImage="/images/happy-hour-bg.jpg"
+        backgroundImage="/images/thumb_drinks_03.jpg"
         height="large"
         showScrollIndicator={false}
       />
@@ -106,7 +106,7 @@ export default function HappyHourPage() {
             className="max-w-xl mx-auto text-center mb-16"
           >
             <div className="bg-primary rounded-2xl p-8 shadow-2xl shadow-primary/20">
-              <div className="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 rounded-[5px] bg-white/20 flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-10 h-10 text-white" />
               </div>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-2">
@@ -133,13 +133,13 @@ export default function HappyHourPage() {
                   key={index}
                   className="special-card bg-light-blue rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <div className="w-14 h-14 rounded-[5px] bg-primary/10 flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-7 h-7 text-primary" />
                   </div>
                   <h3 className="font-serif text-lg font-semibold text-dark mb-2">
                     {special.title}
                   </h3>
-                  <span className="inline-block bg-primary text-white text-sm font-bold px-4 py-1 rounded-full">
+                  <span className="inline-block bg-primary text-white text-sm font-bold px-4 py-1 rounded-[5px]">
                     {special.discount}
                   </span>
                 </div>
@@ -191,7 +191,7 @@ export default function HappyHourPage() {
           </p>
           <a
             href="/location"
-            className="inline-flex px-8 py-4 bg-primary hover:bg-blue/90 text-white rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 hover:scale-105"
+            className="inline-flex px-8 py-4 bg-primary hover:bg-blue/90 text-white rounded-[5px] font-semibold text-sm uppercase tracking-wide transition-all duration-300 hover:scale-105"
           >
             Get Directions
           </a>

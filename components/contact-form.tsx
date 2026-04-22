@@ -180,7 +180,7 @@ export function ContactForm() {
           type="submit"
           disabled={status === "submitting"}
           className={cn(
-            "w-full md:w-auto px-8 py-4 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 flex items-center justify-center gap-2",
+            "w-full md:w-auto px-8 py-4 rounded-[5px] font-semibold text-sm uppercase tracking-wide transition-all duration-300 flex items-center justify-center gap-2",
             status === "submitting"
               ? "bg-dark/50 text-white cursor-not-allowed"
               : "bg-primary hover:bg-blue/90 text-white hover:scale-105 hover:shadow-lg hover:shadow-primary/30"
@@ -188,7 +188,7 @@ export function ContactForm() {
         >
           {status === "submitting" ? (
             <>
-              <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+              <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-[5px] animate-spin" />
               Sending...
             </>
           ) : (

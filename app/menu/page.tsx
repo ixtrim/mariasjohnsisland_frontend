@@ -22,10 +22,10 @@ const menuTabs = [
 ];
 
 const foodImages = [
-  { src: "/images/food-1.jpg", alt: "Tacos Al Pastor" },
-  { src: "/images/food-3.jpg", alt: "Enchiladas" },
-  { src: "/images/food-4.jpg", alt: "Guacamole" },
-  { src: "/images/food-5.jpg", alt: "Fajitas" },
+  { src: "/images/dishes_03.jpg", alt: "Tacos Al Pastor" },
+  { src: "/images/dishes_09.jpg", alt: "Enchiladas" },
+  { src: "/images/dishes_15.jpg", alt: "Guacamole" },
+  { src: "/images/dishes_14.jpg", alt: "Fajitas" },
 ];
 
 export default function MenuPage() {
@@ -71,7 +71,7 @@ export default function MenuPage() {
         title="Our Menu"
         subtitle="Authentic Flavors"
         slogan="A celebration of Jalisco culinary traditions"
-        backgroundImage="/images/menu-hero.jpg"
+        backgroundImage="/images/dishes_04.jpg"
         height="large"
         showScrollIndicator={false}
       />
@@ -99,13 +99,13 @@ export default function MenuPage() {
         <div className="container mx-auto px-4">
           {/* Tab Navigation */}
           <div className="flex justify-center mb-12">
-            <div className="inline-flex bg-light-blue rounded-full p-1">
+            <div className="inline-flex bg-light-blue rounded-[5px] p-1">
               {menuTabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={cn(
-                    "px-6 py-3 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300",
+                    "px-6 py-3 rounded-[5px] font-semibold text-sm uppercase tracking-wide transition-all duration-300",
                     activeTab === tab.id
                       ? "bg-primary text-white shadow-lg"
                       : "text-dark hover:text-primary"
@@ -146,13 +146,13 @@ export default function MenuPage() {
               href="https://www.toasttab.com/marias-mexican-grill-2817-maybank-hwy-ste-7/v3"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-primary hover:bg-blue/90 text-white rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 hover:scale-105"
+              className="px-8 py-4 bg-primary hover:bg-blue/90 text-white rounded-[5px] font-semibold text-sm uppercase tracking-wide transition-all duration-300 hover:scale-105"
             >
               Order Online
             </a>
             <a
               href="/location"
-              className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-dark rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300"
+              className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-dark rounded-[5px] font-semibold text-sm uppercase tracking-wide transition-all duration-300"
             >
               Visit Us
             </a>

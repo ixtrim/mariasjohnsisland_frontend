@@ -52,7 +52,7 @@ export default function LocationPage() {
         title="Visit Us"
         subtitle="Johns Island, SC"
         slogan="Experience authentic Mexican hospitality"
-        backgroundImage="/images/location-hero.jpg"
+        backgroundImage="/images/dishes_01.jpg"
         height="large"
         showScrollIndicator={false}
       />
@@ -63,7 +63,7 @@ export default function LocationPage() {
           <div ref={infoRef} className="grid md:grid-cols-3 gap-8 mb-16">
             {/* Address Card */}
             <div className="info-card bg-light-blue rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 rounded-[5px] bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-serif text-xl font-bold text-dark mb-3">Address</h3>
@@ -87,7 +87,7 @@ export default function LocationPage() {
 
             {/* Phone Card */}
             <div className="info-card bg-light-blue rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 rounded-[5px] bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-serif text-xl font-bold text-dark mb-3">Phone</h3>
@@ -104,7 +104,7 @@ export default function LocationPage() {
 
             {/* Hours Card */}
             <div className="info-card bg-light-blue rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 rounded-[5px] bg-primary/10 flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-serif text-xl font-bold text-dark mb-3">Hours</h3>
@@ -187,7 +187,7 @@ export default function LocationPage() {
             href="https://www.toasttab.com/marias-mexican-grill-2817-maybank-hwy-ste-7/v3"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-blue/90 text-white rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-blue/90 text-white rounded-[5px] font-semibold text-sm uppercase tracking-wide transition-all duration-300 hover:scale-105"
           >
             Order Online
             <ExternalLink className="w-4 h-4" />

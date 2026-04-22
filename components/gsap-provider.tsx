@@ -533,13 +533,13 @@ export function AnimatedButton({
   const baseStyles = "relative overflow-hidden inline-flex items-center justify-center px-8 py-4 font-medium rounded-lg transition-shadow";
   const variantStyles = {
     primary: "bg-[#00a9e4] text-white shadow-lg shadow-[#00a9e4]/30",
-    secondary: "bg-[#1c0301] text-white shadow-lg shadow-[#1c0301]/30",
+    secondary: "bg-[#121212] text-white shadow-lg shadow-[#121212]/30",
     outline: "border-2 border-[#00a9e4] text-[#00a9e4] hover:text-white",
   };
 
   const content = (
     <>
-      <span className="btn-bg absolute inset-0 bg-white/20 rounded-full scale-0 origin-center" />
+      <span className="btn-bg absolute inset-0 bg-white/20 rounded-[5px] scale-0 origin-center" />
       <span className="relative z-10">{children}</span>
     </>
   );

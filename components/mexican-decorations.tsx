@@ -18,7 +18,7 @@ export function ChiliPepper({ className = "" }: { className?: string }) {
       />
       <path
         d="M22 8C22 8 20 2 25 2C30 2 28 8 28 8"
-        stroke="#1c0301"
+        stroke="#121212"
         strokeWidth="2"
         strokeLinecap="round"
       />
@@ -148,7 +148,7 @@ export function Jalapeno({ className = "" }: { className?: string }) {
       />
       <path
         d="M12 5C12 5 14 0 15 0C16 0 18 5 18 5"
-        stroke="#1c0301"
+        stroke="#121212"
         strokeWidth="2"
         strokeLinecap="round"
         fill="none"

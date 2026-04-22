@@ -83,7 +83,7 @@ export function SectionHeading({
 
       <h2
         className={cn(
-          "animate-in font-serif text-3xl md:text-4xl lg:text-5xl font-bold",
+          "animate-in font-[family-name:var(--font-dancing)] text-4xl md:text-5xl lg:text-6xl text-[#121212] mb-8 [text-shadow:-3px_3px_0px_#00a9e4]",
           dark ? "text-white" : "text-dark"
         )}
       >

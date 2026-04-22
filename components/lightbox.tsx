@@ -141,14 +141,14 @@ function LightboxContent({
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-0 bg-[#1c0301]/97 backdrop-blur-md flex items-center justify-center"
+      className="fixed inset-0 bg-[#121212]/97 backdrop-blur-md flex items-center justify-center"
       style={{ zIndex: 99999 }}
       onClick={handleClose}
     >
       {/* Close button */}
       <button
         onClick={handleClose}
-        className="absolute top-6 right-6 z-10 p-4 bg-[#00a9e4]/20 hover:bg-[#00a9e4] rounded-full text-white transition-all duration-300 hover:scale-110 hover:rotate-90 group"
+        className="absolute top-6 right-6 z-10 p-4 bg-[#00a9e4]/20 hover:bg-[#00a9e4] rounded-[5px] text-white transition-all duration-300 hover:scale-110 hover:rotate-90 group"
         aria-label="Close lightbox"
       >
         <X className="w-6 h-6 transition-transform group-hover:scale-110" />
@@ -162,7 +162,7 @@ function LightboxContent({
               e.stopPropagation();
               handlePrevious();
             }}
-            className="absolute left-6 top-1/2 -translate-y-1/2 z-10 p-4 bg-[#00a9e4] hover:bg-[#00a9e4]/80 rounded-full text-white transition-all duration-300 hover:scale-110 hover:-translate-x-1 shadow-lg shadow-[#00a9e4]/30"
+            className="absolute left-6 top-1/2 -translate-y-1/2 z-10 p-4 bg-[#00a9e4] hover:bg-[#00a9e4]/80 rounded-[5px] text-white transition-all duration-300 hover:scale-110 hover:-translate-x-1 shadow-lg shadow-[#00a9e4]/30"
             aria-label="Previous image"
           >
             <ChevronLeft className="w-8 h-8" />
@@ -172,7 +172,7 @@ function LightboxContent({
               e.stopPropagation();
               handleNext();
             }}
-            className="absolute right-6 top-1/2 -translate-y-1/2 z-10 p-4 bg-[#00a9e4] hover:bg-[#00a9e4]/80 rounded-full text-white transition-all duration-300 hover:scale-110 hover:translate-x-1 shadow-lg shadow-[#00a9e4]/30"
+            className="absolute right-6 top-1/2 -translate-y-1/2 z-10 p-4 bg-[#00a9e4] hover:bg-[#00a9e4]/80 rounded-[5px] text-white transition-all duration-300 hover:scale-110 hover:translate-x-1 shadow-lg shadow-[#00a9e4]/30"
             aria-label="Next image"
           >
             <ChevronRight className="w-8 h-8" />
@@ -194,7 +194,7 @@ function LightboxContent({
             src={currentImage.src}
             alt={currentImage.alt}
             fill
-            className="object-contain bg-[#1c0301]"
+            className="object-contain bg-[#121212]"
             sizes="(max-width: 768px) 100vw, 90vw"
             priority
           />
@@ -208,7 +208,7 @@ function LightboxContent({
 
       {/* Image counter */}
       {images.length > 1 && (
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-6 py-3 bg-[#00a9e4] rounded-full text-white font-medium shadow-lg shadow-[#00a9e4]/30">
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-6 py-3 bg-[#00a9e4] rounded-[5px] text-white font-medium shadow-lg shadow-[#00a9e4]/30">
           {currentIndex + 1} / {images.length}
         </div>
       )}

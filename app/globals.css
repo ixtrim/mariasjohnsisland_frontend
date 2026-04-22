@@ -9,24 +9,24 @@
   --light-blue: #dbf2fa;
   --lighter-blue: #c1eaf9;
   --blue: #00a9e4;
-  --dark: #1c0301;
+  --dark: #121212;
   
   /* Semantic tokens mapped to our 5 colors */
   --background: #ffffff;
-  --foreground: #1c0301;
+  --foreground: #121212;
   --card: #ffffff;
-  --card-foreground: #1c0301;
+  --card-foreground: #121212;
   --popover: #ffffff;
-  --popover-foreground: #1c0301;
+  --popover-foreground: #121212;
   --primary: #00a9e4;
   --primary-foreground: #ffffff;
   --secondary: #dbf2fa;
-  --secondary-foreground: #1c0301;
+  --secondary-foreground: #121212;
   --muted: #c1eaf9;
-  --muted-foreground: #1c0301;
+  --muted-foreground: #121212;
   --accent: #c1eaf9;
-  --accent-foreground: #1c0301;
-  --destructive: #1c0301;
+  --accent-foreground: #121212;
+  --destructive: #121212;
   --destructive-foreground: #ffffff;
   --border: #c1eaf9;
   --input: #c1eaf9;
@@ -37,7 +37,7 @@
 @theme inline {
   --font-sans: 'Jost', sans-serif;
   --font-serif: 'Jost', sans-serif;
-  --font-script: 'Dancing Script', cursive;
+  --font-script: 'GellatioRegular', cursive;
   --font-mono: 'Geist Mono', monospace;
   
   --color-background: var(--background);
@@ -65,7 +65,7 @@
   --color-light-blue: #dbf2fa;
   --color-lighter-blue: #c1eaf9;
   --color-blue: #00a9e4;
-  --color-dark: #1c0301;
+  --color-dark: #121212;
   
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -102,7 +102,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1c0301;
+  background: #121212;
 }
 
 /* GSAP animation helpers */
@@ -321,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Text gradient effect */
 .text-gradient {
-  background: linear-gradient(135deg, #00a9e4, #1c0301);
+  background: linear-gradient(135deg, #00a9e4, #121212);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

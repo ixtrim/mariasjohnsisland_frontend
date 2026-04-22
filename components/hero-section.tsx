@@ -13,6 +13,7 @@ interface HeroSectionProps {
   slogan?: string;
   backgroundImage?: string;
   showScrollIndicator?: boolean;
+  showLogo?: boolean;
   height?: "full" | "large" | "medium";
   overlay?: "dark" | "light" | "gradient";
   ctaButtons?: { label: string; href: string; variant?: "primary" | "outline"; external?: boolean }[];
@@ -22,8 +23,9 @@ export function HeroSection({
   title = "Maria's",
   subtitle = "Mexican Grill",
   slogan = "Authentic Jalisco Flavors, Crafted Fresh Every Day",
-  backgroundImage = "/images/hero-bg.jpg",
+  backgroundImage = "/images/restaurant_01.jpg",
   showScrollIndicator = true,
+  showLogo = false,
   height = "full",
   overlay = "gradient",
   ctaButtons,
@@ -133,9 +135,9 @@ export function HeroSection({
   };
 
   const overlayClasses = {
-    dark: "bg-[#1c0301]/60",
+    dark: "bg-[#121212]/60",
     light: "bg-white/30",
-    gradient: "bg-gradient-to-b from-[#1c0301]/80 via-[#1c0301]/40 to-[#1c0301]/80",
+    gradient: "bg-gradient-to-b from-[#121212]/80 via-[#121212]/40 to-[#121212]/80",
   };
 
   return (
@@ -163,27 +165,41 @@ export function HeroSection({
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-        <h1
-          ref={titleRef}
-          className="font-[family-name:var(--font-dancing)] text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] text-white drop-shadow-2xl"
-          style={{ textShadow: "0 4px 30px rgba(0,0,0,0.5)" }}
-        >
-          {title}
-        </h1>
-        <p
-          ref={subtitleRef}
-          className="text-white text-lg sm:text-xl md:text-2xl tracking-[0.3em] uppercase mt-2 drop-shadow-lg"
-        >
-          {subtitle}
-        </p>
+        {showLogo ? (
+          <div className="relative h-[200px] w-full max-w-2xl mb-[30px]">
+            <Image
+              src="/images/logo.png"
+              alt="Maria's Mexican Grill"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+        ) : (
+          <>
+            <h1
+              ref={titleRef}
+              className="font-[family-name:var(--font-dancing)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white [text-shadow:-3px_3px_0px_#121212] mb-[50px]"
+            >
+              {title}
+            </h1>
 
-        <div ref={decorRef} className="my-8 md:my-10">
-          <DecorativeDivider />
-        </div>
+            <p
+              ref={subtitleRef}
+              className="text-white text-lg sm:text-xl md:text-2xl tracking-[0.3em] uppercase mt-2 drop-shadow-lg"
+            >
+              {subtitle}
+            </p>
+
+            <div ref={decorRef} className="my-[40px]">
+              <DecorativeDivider />
+            </div>
+          </>
+        )}
 
         <p
           ref={sloganRef}
-          className="text-xl sm:text-2xl md:text-3xl text-white/90 italic max-w-3xl mx-auto drop-shadow-lg font-light"
+          className="text-xl sm:text-2xl md:text-3xl text-white max-w-3xl mx-auto drop-shadow-lg font-medium"
           style={{ textShadow: "0 2px 10px rgba(0,0,0,0.3)" }}
         >
           {slogan}
@@ -203,8 +219,8 @@ export function HeroSection({
                   rel="noopener noreferrer"
                   className={`btn-animated flex items-center gap-2 ${
                     btn.variant === "outline"
-                      ? "px-10 py-4 border-2 border-white text-white hover:bg-white hover:text-[#1c0301] rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300"
-                      : "px-10 py-4 bg-[#00a9e4] text-white rounded-full font-semibold text-sm uppercase tracking-wide shadow-xl shadow-[#00a9e4]/40"
+                      ? "px-10 py-4 border-2 border-white text-white hover:bg-white hover:text-[#121212] rounded-[5px] font-semibold text-sm uppercase tracking-wide transition-all duration-300"
+                      : "px-10 py-4 bg-[#00a9e4] text-white rounded-[5px] font-semibold text-sm uppercase tracking-wide shadow-xl shadow-[#00a9e4]/40"
                   }`}
                 >
                   {btn.label}
@@ -216,8 +232,8 @@ export function HeroSection({
                   href={btn.href}
                   className={`btn-animated ${
                     btn.variant === "outline"
-                      ? "px-10 py-4 border-2 border-white text-white hover:bg-white hover:text-[#1c0301] rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300"
-                      : "px-10 py-4 bg-[#00a9e4] text-white rounded-full font-semibold text-sm uppercase tracking-wide shadow-xl shadow-[#00a9e4]/40"
+                      ? "px-10 py-4 border-2 border-white text-white hover:bg-white hover:text-[#121212] rounded-[5px] font-semibold text-sm uppercase tracking-wide transition-all duration-300"
+                      : "px-10 py-4 bg-[#00a9e4] text-white rounded-[5px] font-semibold text-sm uppercase tracking-wide shadow-xl shadow-[#00a9e4]/40"
                   }`}
                 >
                   {btn.label}
@@ -237,13 +253,10 @@ export function HeroSection({
         >
           <span className="text-xs uppercase tracking-[0.2em] font-medium">Scroll to explore</span>
           <div className="w-8 h-12 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
-            <div className="w-1.5 h-3 bg-white rounded-full animate-bounce" />
+            <div className="w-1.5 h-3 bg-white rounded-[5px] animate-bounce" />
           </div>
         </div>
       )}
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }

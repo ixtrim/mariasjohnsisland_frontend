@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Dancing_Script, Jost } from "next/font/google";
+import { Jost } from "next/font/google";
+import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Header } from "@/components/header";
@@ -12,8 +13,12 @@ const jost = Jost({
   display: "swap",
 });
 
-const dancingScript = Dancing_Script({
-  subsets: ["latin"],
+const gellatioRegular = localFont({
+  src: [
+    { path: "../public/fonts/GellatioRegular.woff2", format: "woff2" },
+    { path: "../public/fonts/GellatioRegular.woff", format: "woff" },
+    { path: "../public/fonts/GellatioRegular.ttf", format: "truetype" },
+  ],
   variable: "--font-dancing",
   display: "swap",
 });
@@ -47,9 +52,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${jost.variable} ${dancingScript.variable} bg-white`}
+      className={`${jost.variable} ${gellatioRegular.variable} bg-white`}
     >
-      <body className="font-sans antialiased min-h-screen flex flex-col text-[#1c0301]">
+      <body className="font-sans antialiased min-h-screen flex flex-col text-[#121212]">
         <GSAPProvider>
           <Header />
           <main className="flex-1">{children}</main>

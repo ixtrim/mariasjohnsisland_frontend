@@ -39,11 +39,11 @@ export function Footer() {
   }, []);
 
   return (
-    <footer ref={footerRef} className="bg-[#1c0301] text-white relative overflow-hidden">
+    <footer ref={footerRef} className="bg-[#121212] text-white relative overflow-hidden">
       <FloatingDecorations variant="footer" />
       
       {/* Decorative top border */}
-      <div className="h-1 bg-gradient-to-r from-[#1c0301] via-[#00a9e4] to-[#1c0301]" />
+      <div className="h-1 bg-gradient-to-r from-[#121212] via-[#00a9e4] to-[#121212]" />
       
       <div className="container mx-auto px-4 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -60,9 +60,9 @@ export function Footer() {
               </div>
             </Link>
             <p className="mt-6 text-white/70 text-sm leading-relaxed font-[family-name:var(--font-dancing)] text-xl">
-              Authentic Jalisco Flavors,
+              Authentic Jalisco flavors,
               <br />
-              Crafted Fresh Every Day
+              crafted fresh every day.
             </p>
             <div className="mt-4 flex items-center justify-center md:justify-start gap-2">
               <ChiliPepper className="w-6 h-10 opacity-60" />
@@ -121,7 +121,7 @@ export function Footer() {
               href="https://www.toasttab.com/marias-mexican-grill-2817-maybank-hwy-ste-7/v3"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-animated inline-flex items-center gap-2 bg-[#00a9e4] hover:bg-[#00a9e4]/90 text-white px-8 py-4 rounded-full font-semibold text-sm uppercase tracking-wide transition-all duration-300 shadow-lg shadow-[#00a9e4]/30"
+              className="btn-animated inline-flex items-center gap-2 bg-[#00a9e4] hover:bg-[#00a9e4]/90 text-white px-8 py-4 rounded-[5px] font-semibold text-sm uppercase tracking-wide transition-all duration-300 shadow-lg shadow-[#00a9e4]/30"
             >
               Order Online
               <ExternalLink className="w-4 h-4" />

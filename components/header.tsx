@@ -73,8 +73,8 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         isScrolled
-          ? "bg-[#1c0301] shadow-xl py-2"
-          : "bg-[#1c0301]/90 backdrop-blur-sm py-4"
+          ? "bg-[#121212] shadow-xl py-2"
+          : "bg-[#121212] backdrop-blur-sm py-4"
       )}
     >
       <div className="container mx-auto px-4">
@@ -151,7 +151,7 @@ export function Header() {
             isMobileMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
           )}
         >
-          <div className="py-6 flex flex-col gap-4 bg-[#1c0301] border-t border-[#00a9e4]/20 mt-4 px-2">
+          <div className="py-6 flex flex-col gap-4 bg-[#121212] border-t border-[#00a9e4]/20 mt-4 px-2">
             {navItems.map((item, index) =>
               item.external ? (
                 <a

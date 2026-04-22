@@ -29,7 +29,7 @@ const mapStyles = [
   {
     featureType: "all",
     elementType: "labels.text.fill",
-    stylers: [{ color: "#1c0301" }],
+    stylers: [{ color: "#121212" }],
   },
   {
     featureType: "all",
@@ -69,7 +69,7 @@ const mapStyles = [
   {
     featureType: "road",
     elementType: "labels.text.fill",
-    stylers: [{ color: "#1c0301" }],
+    stylers: [{ color: "#121212" }],
   },
   {
     featureType: "road.highway",
@@ -180,7 +180,7 @@ export function StyledMap({ className }: StyledMapProps) {
       const infoWindow = new window.google.maps.InfoWindow({
         content: `
           <div style="padding: 8px; font-family: system-ui, sans-serif;">
-            <h3 style="margin: 0 0 4px; font-size: 14px; font-weight: 600; color: #1c0301;">Maria's Mexican Grill</h3>
+            <h3 style="margin: 0 0 4px; font-size: 14px; font-weight: 600; color: #121212;">Maria's Mexican Grill</h3>
             <p style="margin: 0; font-size: 12px; color: #666;">2817 Suite 6 Maybank Hwy<br>Johns Island, SC 29455</p>
           </div>
         `,
@@ -230,7 +230,7 @@ export function StyledMap({ className }: StyledMapProps) {
             {/* Custom marker overlay */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-full pointer-events-none">
               <div className="relative">
-                <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow-lg animate-bounce">
+                <div className="w-8 h-8 bg-primary rounded-[5px] flex items-center justify-center shadow-lg animate-bounce">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-primary rotate-45" />
