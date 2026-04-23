@@ -3,9 +3,8 @@
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { MapPin, Phone, Clock, ExternalLink, Mail } from "lucide-react";
+import { MapPin, Phone, Clock, ExternalLink } from "lucide-react";
 import { HeroSection } from "@/components/hero-section";
-import { ContactForm } from "@/components/contact-form";
 import { StyledMap } from "@/components/styled-map";
 
 if (typeof window !== "undefined") {
@@ -143,32 +142,6 @@ export default function LocationPage() {
                   <span className="text-dark/70">{item.hours}</span>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
-      <section className="py-16 md:py-24 bg-light-blue">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <span className="text-primary text-sm uppercase tracking-[0.2em] font-medium">
-                Get In Touch
-              </span>
-              <div className="decorative-divider my-4">
-                <span className="text-xl text-primary">&#10022;</span>
-              </div>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-4">
-                Contact Us
-              </h2>
-              <p className="text-dark/70 text-lg">
-                Have a question or want to make a reservation? {"We'd"} love to hear from you!
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
-              <ContactForm />
             </div>
           </div>
         </div>

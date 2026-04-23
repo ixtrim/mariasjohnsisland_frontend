@@ -181,21 +181,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Image Gallery Section */}
-      <section className="py-20 bg-[#dbf2fa] relative">
-        <div className="container mx-auto px-4">
-          <SectionHeading
-            eyebrow="Our Dishes"
-            title="A Taste of Jalisco"
-            description="Fresh ingredients, bold flavors, and traditional recipes crafted with passion."
-          />
-          
-          <ImageGallery images={galleryImages} variant="masonry" className="max-w-7xl mx-auto" />
-        </div>
-      </section>
-
       {/* Menu Preview Section */}
-      <section ref={menuRef} className="py-24 md:py-32 bg-white overflow-hidden relative">
+      <section ref={menuRef} className="py-24 md:py-32 bg-[#dbf2fa] overflow-hidden relative">
         {/* Decorative elements */}
         <Cactus className="decor-left absolute top-20 left-8 w-16 h-28 opacity-15 hidden lg:block" />
         <Margarita className="decor-right absolute bottom-20 right-8 w-14 h-20 opacity-15 hidden lg:block" />
@@ -262,6 +249,19 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Image Gallery Section */}
+      <section className="py-20 bg-white relative">
+        <div className="container mx-auto px-4">
+          <SectionHeading
+            eyebrow="Our Dishes"
+            title="A Taste of Jalisco"
+            description="Fresh ingredients, bold flavors, and traditional recipes crafted with passion."
+          />
+
+          <ImageGallery images={galleryImages} variant="masonry" className="max-w-7xl mx-auto" />
         </div>
       </section>
 
