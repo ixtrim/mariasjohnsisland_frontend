@@ -21,11 +21,20 @@ export const drinksMenu: MenuSection = {
   title: "Drinks",
   categories: [
     {
-      name: "Signature Margaritas",
+      name: "Margaritas",
+      description: "Made from scratch. Make it with mezcal for an extra $2.00.",
       items: [
         {
+          name: "House Fresca",
+          description: "Tequila Blanco, made from scratch margarita mix, shaken and served in a salt-rimmed glass.",
+          prices: [
+            { size: "Small", price: "$7" },
+            { size: "Grande", price: "$12" },
+          ],
+        },
+        {
           name: "Texas Margarita",
-          description: "Jose Cuervo Especial Gold Tequila, Gran Gala, sweet & sour and a splash of orange juice.",
+          description: "Jose Cuervo Especial Gold Tequila, Gran Gala, sweet & sour, and a splash of orange juice.",
           prices: [
             { size: "Small", price: "$8" },
             { size: "Grande", price: "$14" },
@@ -33,12 +42,37 @@ export const drinksMenu: MenuSection = {
         },
         {
           name: "Guava Margarita",
-          description: "Reposado Tequila, guava nectar, made from scratch margarita mix, salt rimmed glass.",
+          description: "Reposado Tequila, guava nectar, made from scratch margarita mix, served in a salt-rimmed glass.",
           price: "$10",
         },
         {
-          name: "Jalapeño Infused Margarita",
-          description: "Jalapeño infused tequila, fresh lime juice, orange juice and agave nectar. Served in a tajin salt rimmed glass.",
+          name: "Jalapeño Infused",
+          description: "Jalapeño-infused tequila, fresh lime juice, orange juice, and agave nectar. Served in a tajin salt-rimmed glass.",
+          price: "$10",
+        },
+        {
+          name: "Berry Basil",
+          description: "Tequila Blanco, fresh margarita mix, muddled berries, basil, and agave nectar.",
+          price: "$10",
+        },
+        {
+          name: "Mercadito",
+          description: "Jalapeño-infused tequila, fresh margarita mix, muddled mint, cucumber, served in a tajin-rimmed glass.",
+          price: "$10",
+        },
+        {
+          name: "Pineapple Habanero",
+          description: "Habanero-infused tequila, pineapple juice, and fresh margarita mix. Served in a tajin salt-rimmed glass.",
+          price: "$12",
+        },
+        {
+          name: "La Skinny",
+          description: "Tequila Blanco, fresh lime, and agave nectar, shaken.",
+          price: "$10",
+        },
+        {
+          name: "Tamarindo",
+          description: "Tequila Blanco, fresh margarita mix, tamarind purée, served in a tajin salt-rimmed glass.",
           price: "$10",
         },
         {
@@ -46,74 +80,96 @@ export const drinksMenu: MenuSection = {
           description: "1800 Cucumber & Jalapeño Tequila with agave mix.",
           price: "$10",
         },
-        {
-          name: "Tamarind Margarita",
-          description: "Classic margarita with rich tamarind flavor.",
-          price: "$10",
-        },
       ],
     },
     {
-      name: "Specialty Cocktails",
+      name: "Frozen Margaritas",
       items: [
         {
-          name: "Paloma",
-          description: "Tequila Reposado, fresh grapefruit juice, fresh lime juice, agave nectar and a pinch of salt, topped with soda. Served in a salt rimmed glass.",
-          price: "$12",
-        },
-        {
-          name: "Bloody Maria",
-          description: "Tequila Reposado, lime juice and michelada mix.",
-          price: "$12",
-        },
-        {
-          name: "Mex-spresso Martini",
-          description: "Mezcal, Averna, Ancho Reyes, Kahlúa and Espresso.",
-          price: "$12",
-        },
-        {
-          name: "Mexican Old Fashioned",
-          description: "Añejo Tequila, Angostura bitters, agave nectar, orange zest.",
-          price: "$14",
-        },
-        {
-          name: "Hot & Dirty",
-          description: "Tequila Reposado, lime juice, cointreau, olive brine.",
-          price: "$14",
-        },
-        {
-          name: "Mexican Mule",
-          description: "Choice of Tequila or Mezcal, agave nectar, lime and ginger beer, with orange zest garnish.",
-          price: "$12",
-        },
-        {
-          name: "Oaxacan & Tonic",
-          description: "Mezcal, tonic water and lime.",
-          price: "$10",
-        },
-        {
-          name: "Tito's Passion",
-          description: "Tito's Handmade Vodka, passion fruit purée, coconut water.",
-          price: "$10",
-        },
-      ],
-    },
-    {
-      name: "Beer",
-      items: [
-        {
-          name: "Michelada",
-          description: "Modelo Especial, house made michelada mix (tomato clamato juice, lime, hot sauce, spices, and more). Served in a Tajin rimmed beer glass.",
+          name: "Frozen Margaritas",
+          description: "Flavor options: Mango | Strawberry | Guava | Lime | Piña Colada | Peach | Watermelon | Tamarind.",
           prices: [
-            { size: "Small", price: "$9" },
-            { size: "Large", price: "$16" },
+            { size: "Small", price: "$8" },
+            { size: "Grande", price: "$13" },
+          ],
+        },
+      ],
+    },
+    {
+      name: "Margarita Flights",
+      items: [
+        {
+          name: "Margarita Flights",
+          description: "Flavor options: Mango | Strawberry | Guava | Lime | Piña Colada | Peach | Watermelon.",
+          prices: [
+            { size: "4 Flavor", price: "$18" },
+          ],
+        },
+        {
+          name: "Margarona",
+          description: "Coronita beer and frozen margarita, served in a salt-rimmed glass.",
+          price: "$15",
+        },
+        {
+          name: "Cantarito",
+          description: "Tequila Reposado, lime juice, pineapple juice, grapefruit juice, agave, and grapefruit soda.",
+          price: "$14",
+        },
+      ],
+    },
+    {
+      name: "Mimosas",
+      items: [
+        {
+          name: "Classic Mimosa",
+          description: "Champagne and fresh squeezed orange juice.",
+          prices: [
+            { size: "Glass", price: "$6" },
+            { size: "Carafe", price: "$14" },
+          ],
+        },
+        {
+          name: "Guava Mimosa",
+          description: "Champagne, guava purée, and fresh squeezed orange juice.",
+          prices: [
+            { size: "Glass", price: "$7" },
+            { size: "Carafe", price: "$16" },
+          ],
+        },
+        {
+          name: "Peach Mimosa",
+          description: "Champagne and peach purée.",
+          prices: [
+            { size: "Glass", price: "$7" },
+            { size: "Carafe", price: "$16" },
+          ],
+        },
+      ],
+    },
+    {
+      name: "Draft Beer",
+      items: [
+        {
+          name: "Import Beer",
+          description: "Modelo Especial, Pacifico, Dos Equis Amber, and Michelob.",
+          prices: [
+            { size: "Pint", price: "$6" },
+            { size: "Tall", price: "$9" },
+          ],
+        },
+        {
+          name: "Domestic Beer",
+          description: "Ultra, Miller Lite, and Coors Light.",
+          prices: [
+            { size: "Pint", price: "$5" },
+            { size: "Tall", price: "$8" },
           ],
         },
       ],
     },
     {
       name: "Imported Beer",
-      description: "$5.00 each",
+      description: "$5.00",
       items: [
         { name: "Corona" },
         { name: "Corona Light" },
@@ -130,18 +186,71 @@ export const drinksMenu: MenuSection = {
     },
     {
       name: "Domestic Beer",
-      description: "$4.75 each. Ask your server for seasonal beers & seltzers.",
+      description: "Ask your server for seasonal beers and seltzers. $4.75",
       items: [
         { name: "Budweiser" },
         { name: "Bud Light" },
         { name: "Michelob Ultra" },
-        { name: "Miller Lite" },
+        { name: "Miller Light" },
         { name: "Coors Light" },
+        {
+          name: "Michelada",
+          description: "Modelo Especial with house-made michelada mix (tomato clamato juice, lime, hot sauce, spices, and more). Served in a tajin-rimmed beer mug.",
+          prices: [
+            { size: "Small", price: "$11" },
+            { size: "Tall", price: "$16" },
+          ],
+        },
+      ],
+    },
+    {
+      name: "Specialty Cocktails",
+      items: [
+        {
+          name: "Paloma",
+          description: "Tequila Reposado, fresh grapefruit juice, fresh lime juice, agave nectar, and a pinch of salt, topped with soda. Served in a salt-rimmed glass.",
+          price: "$12",
+        },
+        {
+          name: "Mexican Old Fashioned",
+          description: "Añejo Tequila, Angostura bitters, agave nectar, and orange zest.",
+          price: "$14",
+        },
+        {
+          name: "Mexican Mule",
+          description: "Choice of Tequila or Mezcal, agave nectar, lime, and ginger beer, with orange zest garnish.",
+          price: "$11",
+        },
+        {
+          name: "Tito's Passion",
+          description: "Tito's Handmade Vodka, passion fruit purée, and coconut water.",
+          price: "$10",
+        },
+        {
+          name: "Bloody Maria",
+          description: "Reposado Tequila, lime juice, and michelada mix.",
+          price: "$12",
+        },
+        {
+          name: "Mex-spresso Martini",
+          description: "Mezcal, Averna, Ancho Reyes, Kahlúa, and espresso.",
+          price: "$12",
+        },
+        {
+          name: "Hot & Dirty",
+          description: "Tequila Reposado, lime juice, Cointreau, and olive brine.",
+          price: "$14",
+        },
+        {
+          name: "Oaxacan & Tonic",
+          description: "Mezcal, tonic water, and lime.",
+          price: "$10",
+        },
       ],
     },
     {
       name: "House Wines",
-      description: "Glass $7 | Bottle $25",
+      description: "$7",
       items: [
         { name: "Pinot Grigio" },
         { name: "Chardonnay" },
@@ -157,12 +266,12 @@ export const drinksMenu: MenuSection = {
       items: [
         {
           name: "White Sangria",
-          description: "White wine, sangria syrup, mixed fruit and a splash of soda.",
+          description: "White wine and sangria syrup with mixed fruit and a splash of soda.",
           price: "$8",
         },
         {
           name: "Red Sangria",
-          description: "Red wine, sangria syrup, mixed fruits and a splash of soda.",
+          description: "Red wine and sangria syrup with mixed fruits and a splash of soda.",
           price: "$8",
         },
       ],
@@ -182,8 +291,8 @@ export const tequilaMenu: MenuSection = {
       ],
     },
     {
-      name: "Tequila Blanco (Silver)",
-      description: "The heart and passion of Mexico, only 5 states are authorized to produce it. Tequila can only be produced from the Blue Weber agave and 100% agave.",
+      name: "Blanco Silver",
+      description: "The heart and passion of Mexico, only 5 states are authorized to produce it. Tequila can only be produced from the Blue Webber agave and 100% agave.",
       items: [
         { name: "7 Leguas" },
         { name: "Casa Amigos" },
@@ -198,7 +307,8 @@ export const tequilaMenu: MenuSection = {
         { name: "Milagro" },
         { name: "Corralejo" },
         { name: "Patrón" },
-        { name: "Sauza Hornitos" },
+        { name: "Sauza" },
+        { name: "Hornitos" },
         { name: "Lalo" },
         { name: "Tequila 8" },
       ],
