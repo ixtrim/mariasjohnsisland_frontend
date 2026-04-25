@@ -358,134 +358,270 @@ export const tequilaMenu: MenuSection = {
   ],
 };
 
-// Food Menu (based on typical Mexican restaurant offerings)
+// Food Menu
 export const foodMenu: MenuSection = {
   title: "Food",
   categories: [
     {
-      name: "Appetizers",
+      name: "Lunch Time",
       items: [
         {
-          name: "Guacamole",
-          description: "Fresh avocados, tomatoes, onions, cilantro, jalapeño, lime. Served with warm tortilla chips.",
-          price: "$12",
+          name: "Make Your Own Lunch Combo",
+          description: "Choose One: Tostada | Burrito | Chile Poblano | Enchilada | Hard Taco | Quesadilla | Chalupa. *Chile Poblano stuffed with cheese only. Protein Options: Ground beef, shredded beef birria, shredded chicken tinga, beans or cheese.",
+          price: "$8",
         },
         {
-          name: "Queso Fundido",
-          description: "Melted Oaxaca cheese with chorizo, served with warm tortillas.",
-          price: "$14",
+          name: "Burrito Grande",
+          description: "Flour tortilla filled with grilled chicken, beef, rice and beans. Topped with cheese and ranchero sauce.",
+          price: "$10.50",
         },
         {
-          name: "Nachos Supreme",
-          description: "Crispy tortilla chips topped with beans, cheese, jalapeños, sour cream, guacamole, and pico de gallo. Add chicken or beef +$4.",
-          price: "$15",
+          name: "Special Rice",
+          description: "Rice topped with your choice of protein, grilled bell peppers and our delicious cheese sauce.",
+          prices: [
+            { size: "Chicken", price: "$8.50" },
+            { size: "Pastor", price: "$8.50" },
+            { size: "Steak", price: "$9.50" },
+            { size: "Shrimp", price: "$10.50" },
+          ],
         },
         {
-          name: "Ceviche",
-          description: "Fresh fish marinated in lime juice with tomatoes, onions, cilantro, and avocado.",
-          price: "$16",
+          name: "Fajita Quesadilla",
+          description: "Flour tortilla with cheese, choice of protein, grilled onions and bell peppers. Served with rice.",
+          prices: [
+            { size: "Steak", price: "$9.50" },
+            { size: "Chicken", price: "$8.50" },
+            { size: "Shrimp", price: "$10.50" },
+          ],
         },
         {
-          name: "Aguachile",
-          description: "Shrimp marinated in lime and serrano peppers with cucumber and red onion.",
-          price: "$18",
+          name: "Chimichanga",
+          description: "Fried or soft tortilla, shredded beef or chicken tinga, and cheese sauce. Side of rice or beans and crema salad.",
+          price: "$9.50",
+        },
+        {
+          name: "Chilaquiles",
+          description: "Fried tortilla strips cooked with salsa verde or salsa rojo, garnished with red onions, cilantro, crema, Cotija cheese and avocado on a bed of beans.",
+          prices: [
+            { size: "Fried Eggs*", price: "$14" },
+            { size: "Grilled Chicken", price: "$16" },
+            { size: "Steak", price: "$17" },
+          ],
+        },
+        {
+          name: "Lunch Fajita*",
+          description: "Choice of protein with grilled onions and bell peppers. Served with rice and beans.",
+          prices: [
+            { size: "Chicken", price: "$11" },
+            { size: "Steak", price: "$12" },
+            { size: "Shrimp", price: "$13" },
+          ],
+        },
+        {
+          name: "Maria's Bowl*",
+          description: "Served with black beans, grilled corn, pico de gallo, pickled onions, crema, Cotija cheese, guacamole and rice.",
+          prices: [
+            { size: "Grilled Chicken", price: "$10.50" },
+            { size: "Steak", price: "$11.50" },
+          ],
+        },
+        {
+          name: "Huevos Al Gusto",
+          description: "Divorciados, Rancheros, A La Mexicana or Con Chorizo. Served with rice, beans and tortillas.",
+          price: "$11.50",
+        },
+        {
+          name: "Notice",
+          description: "*Cooked to order. Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness, especially if you have certain medical conditions.",
         },
       ],
     },
     {
-      name: "Tacos",
-      description: "Served with rice and beans. Three tacos per order.",
+      name: "Appetizers",
       items: [
         {
-          name: "Tacos Al Pastor",
-          description: "Marinated pork, pineapple, cilantro, onions on corn tortillas.",
-          price: "$16",
+          name: "Calamari",
+          description: "Delicious fried calamari topped with chipotle cream sauce, pico de gallo and tajin chili powder.",
+          price: "$14",
         },
         {
-          name: "Tacos de Carnitas",
-          description: "Slow-cooked pulled pork with cilantro and onions.",
-          price: "$16",
-        },
-        {
-          name: "Tacos de Carne Asada",
-          description: "Grilled steak with cilantro, onions, and salsa verde.",
-          price: "$18",
-        },
-        {
-          name: "Tacos de Pollo",
-          description: "Grilled chicken with lettuce, tomato, and chipotle crema.",
+          name: "Maria's Sampler",
+          description: "Chicken taquitos, cheese quesadilla, nachos, lettuce, tomato, sour cream, jalapeños, cheese dip and salsa.",
           price: "$15",
         },
         {
-          name: "Tacos de Pescado",
-          description: "Beer-battered fish with cabbage slaw and chipotle mayo.",
-          price: "$18",
+          name: "Tradicional Ceviche",
+          description: "Tilapia fish cooked with lime juice, pico de gallo, topped with avocado sliced and served with crackers.",
+          prices: [
+            { size: "Fish", price: "$15" },
+            { size: "Shrimp", price: "$17" },
+          ],
         },
         {
-          name: "Tacos de Camarón",
-          description: "Grilled shrimp with mango salsa and avocado crema.",
-          price: "$19",
+          name: "Loaded Fries",
+          description: "Fries, choice of meat, pico de gallo, melted cheese and jalapeños.",
+          prices: [
+            { size: "Chicken", price: "$13" },
+            { size: "Chorizo", price: "$13" },
+            { size: "Steak", price: "$14" },
+          ],
+        },
+        {
+          name: "Toros Rellenos",
+          description: "Flour tortillas on a bed of lettuce stuffed with a mixture of crab, shrimp, creamy cheese and veggies, rolled and fried until crispy served with chipotle cheese for dipping.",
+          price: "$15",
+        },
+        {
+          name: "Chicken Wings",
+          description: "Mild, Hot, Habanero and Lemon Pepper.",
+          prices: [
+            { size: "6 pcs.", price: "$9" },
+            { size: "12 pcs.", price: "$16" },
+          ],
+        },
+        {
+          name: "Corn Ribs",
+          description: "Blistered corn ribs slathered in a creamy Mexican mayo blend, topped with crumbled Cotija cheese, Tajin and cilantro.",
+          price: "$8",
+        },
+      ],
+    },
+    {
+      name: "Dips",
+      items: [
+        {
+          name: "Cheese Dip",
+          price: "$6",
+        },
+        {
+          name: "Bean Dip",
+          price: "$8",
+        },
+        {
+          name: "Guacamole Dip",
+          price: "$7",
+        },
+        {
+          name: "Texas Dip",
+          description: "A rich blend of shrimp, steak, chicken and pico de gallo topped with cheese dip.",
+          price: "$15",
+        },
+        {
+          name: "Trio Dip",
+          description: "Bean dip, queso dip and guacamole dip.",
+          price: "$15",
+        },
+        {
+          name: "Queso Fundido",
+          description: "Bowl of cheese dip with your choice of ground beef or chorizo Mexican sausage.",
+          price: "$10.50",
+        },
+        {
+          name: "Salsa Dip",
+          description: "Habanero, verde or tomatillo.",
+          prices: [
+            { size: "2 oz", price: "$2" },
+            { size: "4 oz", price: "$4" },
+            { size: "8 oz", price: "$7" },
+            { size: "16 oz", price: "$12" },
+          ],
+        },
+      ],
+    },
+    {
+      name: "Nachos",
+      description: "All nachos include cheese.",
+      items: [
+        {
+          name: "Classic Nachos",
+          description: "Choice of one topping: refried beans, black beans, shredded chicken, ground beef or shredded beef.",
+          price: "$11",
+        },
+        {
+          name: "Fajita Nachos",
+          description: "Grilled steak, chicken or shrimp cooked with bell peppers and onions.",
+          prices: [
+            { size: "Chicken", price: "$14" },
+            { size: "Steak", price: "$15" },
+            { size: "Shrimp", price: "$16" },
+          ],
+        },
+        {
+          name: "Maria's Special Nachos",
+          description: "Choice of one topping: refried beans, black beans, shredded chicken, ground beef or shredded beef. With lettuce, tomato, sour cream and jalapeños.",
+          price: "$14",
+        },
+      ],
+    },
+    {
+      name: "Ensaladas",
+      items: [
+        {
+          name: "Taco Salad",
+          description: "Beef or chicken with beans, cheese, lettuce, sour cream and tomato. Add Grilled Chicken +$3",
+          price: "$11",
+        },
+        {
+          name: "Cancun Salad",
+          description: "Shrimp salad with salad mix, zucchini, mushrooms, squash, pico de gallo, cheese, onions, tomatoes and your choice of dressing.",
+          price: "$15",
+        },
+        {
+          name: "Maria's Chicken Salad",
+          description: "Salad mix, tomatoes, onions, bell peppers and cheese, topped with strips of chicken.",
+          price: "$13",
+        },
+        {
+          name: "Avocado Salad",
+          description: "Salad mix, avocado slices, tomatoes, cheese, cucumbers and red onions and your choice of dressing. Add Grilled Chicken +$3 | Add Skirt Steak +$4 | Add Grilled Shrimp +$6",
+          price: "$11",
+        },
+        {
+          name: "Dressing Options",
+          description: "Ranch | Balsamic Vinaigrette | Cilantro Lime Vinaigrette | Cilantro Lime Ranch",
         },
       ],
     },
     {
       name: "Enchiladas",
-      description: "Three enchiladas served with rice and beans.",
       items: [
         {
-          name: "Enchiladas Rojas",
-          description: "Chicken or beef enchiladas with red sauce, topped with cheese and sour cream.",
-          price: "$17",
+          name: "Enchiladas",
+          description: "Ground or shredded beef, shredded chicken, beans, spinach, mushroom or cheese.",
+          prices: [
+            { size: "(1)", price: "$5" },
+            { size: "(3)", price: "$14" },
+          ],
+        },
+        {
+          name: "Trio Enchiladas",
+          description: "Three chicken enchiladas topped with three different sauces: green sauce, mole sauce and ranchero sauce, topped with cheese, sour cream, onions and cilantro. Served with rice.",
+          price: "$16",
+        },
+        {
+          name: "Enchiladas Rancheras",
+          description: "Five enchiladas. Ground beef, shredded chicken, shredded beef, beans and cheese, topped with lettuce, sour cream, cheese and pico de gallo.",
+          price: "$18",
+        },
+        {
+          name: "Enchiladas Poblanas",
+          description: "Three shredded chicken enchiladas, topped with mole sauce, cheese and onions. Served with rice and salad.",
+          price: "$16",
         },
         {
           name: "Enchiladas Verdes",
-          description: "Chicken enchiladas with tomatillo green sauce and queso fresco.",
-          price: "$17",
+          description: "Three shredded chicken enchiladas topped with green sauce, served with rice and salad.",
+          price: "$16",
         },
         {
-          name: "Enchiladas Suizas",
-          description: "Chicken enchiladas with creamy tomatillo sauce and melted cheese.",
+          name: "Enchiladas Santa Fe",
+          description: "Three corn tortillas stuffed with grilled chicken and spinach topped with poblano sauce and sour cream, served with rice.",
           price: "$18",
         },
         {
-          name: "Enchiladas de Mole",
-          description: "Chicken enchiladas with authentic Oaxacan mole sauce.",
+          name: "Enchiladas Vallarta",
+          description: "Three enchiladas stuffed with shrimp, crabmeat, onion and tomatoes topped with crab creamy sauce. Served with rice.",
           price: "$19",
-        },
-      ],
-    },
-    {
-      name: "Especialidades de la Casa",
-      items: [
-        {
-          name: "Fajitas",
-          description: "Sizzling grilled peppers and onions. Choice of chicken, steak, or shrimp. Served with rice, beans, tortillas, guacamole, and sour cream.",
-          price: "$22",
-        },
-        {
-          name: "Chile Relleno",
-          description: "Roasted poblano pepper stuffed with cheese, dipped in egg batter, served with ranchero sauce, rice and beans.",
-          price: "$18",
-        },
-        {
-          name: "Mole Poblano",
-          description: "Chicken breast topped with traditional Oaxacan mole sauce. Served with rice and beans.",
-          price: "$20",
-        },
-        {
-          name: "Carnitas",
-          description: "Slow-cooked pork served with rice, beans, tortillas, and all the fixings.",
-          price: "$19",
-        },
-        {
-          name: "Cochinita Pibil",
-          description: "Yucatan-style slow-roasted pork marinated in achiote. Served with pickled onions, rice and beans.",
-          price: "$21",
-        },
-        {
-          name: "Carne Asada",
-          description: "Grilled ribeye steak served with rice, beans, guacamole, and tortillas.",
-          price: "$26",
         },
       ],
     },
@@ -493,30 +629,428 @@ export const foodMenu: MenuSection = {
       name: "Burritos",
       items: [
         {
-          name: "Burrito California",
-          description: "Large flour tortilla filled with your choice of meat, rice, beans, cheese, guacamole, and sour cream.",
-          price: "$16",
+          name: "Burrito",
+          description: "Choice of one filling: ground or shredded beef, chicken, beans, spinach, mushroom or cheese.",
+          prices: [
+            { size: "(1)", price: "$6" },
+            { size: "(2)", price: "$11" },
+          ],
         },
         {
-          name: "Burrito Mojado",
-          description: "Wet burrito smothered in red sauce and melted cheese.",
+          name: "Burritos Deluxe",
+          description: "One chicken and bean burrito, and one beef and bean burrito topped with lettuce, sour cream and tomato.",
+          price: "$13",
+        },
+        {
+          name: "Cheese Steak Burritos",
+          description: "Two rolled flour tortillas filled with steak and beans. Topped with cheese dip and pico de gallo.",
+          price: "$15",
+        },
+        {
+          name: "Burritos Mexicanos",
+          description: "Two burritos with your choice of one meat, cooked with onions and bell peppers. Topped with cheese dip, lettuce, sour cream and tomato.",
+          prices: [
+            { size: "Chicken", price: "$15" },
+            { size: "Steak", price: "$16" },
+            { size: "Shrimp", price: "$17" },
+          ],
+        },
+        {
+          name: "Mucho Grande Burrito",
+          description: "Your choice of meat with grilled mushrooms, onions and tomatoes rolled in a big flour tortilla, topped with cheese dip, ranchero sauce, lettuce, pico de gallo and tomatoes.",
+          prices: [
+            { size: "Chicken", price: "$14" },
+            { size: "Steak", price: "$15" },
+            { size: "Shrimp", price: "$16" },
+          ],
+        },
+        {
+          name: "Maria's Burrito",
+          description: "Choice of protein, stuffed with rice, black beans, pico de gallo and cheese sauce, topped with salsa verde, pickled onions, Cotija cheese and crema.",
+          prices: [
+            { size: "Chicken", price: "$15" },
+            { size: "Steak", price: "$16" },
+            { size: "Carnitas", price: "$15" },
+            { size: "Pastor", price: "$15" },
+          ],
+        },
+        {
+          name: "Macho Burrito",
+          description: "Grilled chicken, poblano peppers, onion, cheese, black beans and rice topped with sweet agave nectar chipotle salsa.",
+          prices: [
+            { size: "Chicken", price: "$15" },
+            { size: "Steak", price: "$16" },
+          ],
+        },
+      ],
+    },
+    {
+      name: "Fajitas",
+      description: "All fajitas are grilled to perfection with onions and bell peppers served with rice, and your choice of black or refried beans, lettuce, sour cream, shredded cheese and tortillas. Add guacamole for mkts.",
+      items: [
+        {
+          name: "Chicken Fajitas",
+          price: "$16.00",
+        },
+        {
+          name: "Steak Fajitas",
+          price: "$17.00",
+        },
+        {
+          name: "Shrimp Fajitas",
+          price: "$18.00",
+        },
+        {
+          name: "Trio Fajitas",
+          description: "Chicken, steak and shrimp.",
+          price: "$20.00",
+        },
+        {
+          name: "Maria's Fajitas",
+          description: "Chicken, steak, shrimp, pork and Mexican sausage.",
+          price: "$22.00",
+        },
+        {
+          name: "Veggie Fajitas",
+          description: "Onions, green and red bell peppers, mushrooms, zucchini, squash, broccoli, cauliflower and spinach.",
+          price: "$14",
+        },
+      ],
+    },
+    {
+      name: "Carnes",
+      items: [
+        {
+          name: "Steak Ranchero",
+          description: "Grilled rib-eye steak cooked with onions and bell peppers. Served with rice, refried or black beans, and salad.",
+          price: "$18.50",
+        },
+        {
+          name: "Steak Mexicano",
+          description: "Chopped rib-eye cooked with onions, tomatoes and jalapeño peppers. Served with rice and your choice of refried or black beans.",
+          price: "$18.50",
+        },
+        {
+          name: "Steak Jalisco",
+          description: "Rib-eye steak cooked with mushrooms and onions, topped with cheese dip and ranchero sauce. Served with rice and beans.",
+          price: "$18.50",
+        },
+        {
+          name: "Carne Asada",
+          description: "Grilled skirt steak topped with green onions. Served with refried or black beans and guacamole salad.",
+          price: "$18.50",
+        },
+        {
+          name: "Carnitas",
+          description: "Pork chunks served with rice, refried or black beans, and guacamole salad.",
+          price: "$17",
+        },
+        {
+          name: "Chile Verde",
+          description: "Pork carnitas cooked in green sauce. Served with rice and refried or black beans.",
+          price: "$17",
+        },
+        {
+          name: "Chile Colorado",
+          description: "Chopped steak cooked in red sauce. Served with rice and refried or black beans.",
           price: "$18",
         },
       ],
     },
     {
-      name: "Combinaciones",
-      description: "Create your own combination plate. Served with rice and beans.",
+      name: "Quesadillas",
       items: [
         {
-          name: "Two Item Combo",
-          description: "Choose any two: taco, enchilada, tamale, chile relleno, or tostada.",
+          name: "Cheese Quesadilla",
+          price: "$5.50",
+        },
+        {
+          name: "Fajitas Quesadilla",
+          description: "10 inch flour tortilla stuffed with your choice of meat cooked with bell peppers and onions. Served with rice and salad.",
+          prices: [
+            { size: "Chicken", price: "$15" },
+            { size: "Steak", price: "$16" },
+            { size: "Shrimp", price: "$17" },
+          ],
+        },
+        {
+          name: "Quesadilla Rellena",
+          description: "Choice of one topping: ground beef, shredded chicken, shredded beef or pork. Served with your choice of rice, refried or black beans.",
+          price: "$11.50",
+        },
+      ],
+    },
+    {
+      name: "Tacos",
+      items: [
+        {
+          name: "Classic Tacos",
+          description: "Choice of hard or soft tortilla, ground beef or shredded chicken, lettuce and cheese.",
+          prices: [
+            { size: "(1)", price: "$3.25" },
+            { size: "(3)", price: "$8.75" },
+          ],
+        },
+        {
+          name: "Street Tacos",
+          description: "Choice of grilled chicken, steak, pastor, chorizo or carnitas. Served with onions, cilantro and lime.",
+          prices: [
+            { size: "(1)", price: "$5" },
+            { size: "(3)", price: "$14" },
+          ],
+        },
+        {
+          name: "Fish Tacos",
+          description: "Flour tortilla, choice of fried or grilled tilapia, topped with red cabbage, pico de gallo and chipotle cream sauce.",
+          prices: [
+            { size: "(1)", price: "$5.50" },
+            { size: "(3)", price: "$15.50" },
+          ],
+        },
+        {
+          name: "Shrimp Tacos",
+          description: "Flour tortilla, grilled shrimp, topped with red cabbage, pico de gallo and chipotle cream sauce.",
+          prices: [
+            { size: "(1)", price: "$5.75" },
+            { size: "(3)", price: "$16.25" },
+          ],
+        },
+      ],
+    },
+    {
+      name: "Pollo",
+      description: "Groups of 8 or more: one check please.",
+      items: [
+        {
+          name: "Chicken Tortilla Soup",
+          description: "Tender chicken breast, rice, pico de gallo, avocado and tortilla strips in a rich chicken broth.",
+          price: "$8.50",
+        },
+        {
+          name: "Arroz Con Pollo",
+          description: "Grilled chicken strips topped with cheese dip and ranchero sauce. Served with rice and salad.",
           price: "$16",
         },
         {
-          name: "Three Item Combo",
-          description: "Choose any three: taco, enchilada, tamale, chile relleno, or tostada.",
+          name: "Pollo Asado",
+          description: "Grilled chicken breast topped with cheese dip and ranchero sauce. Served with rice, salad and pico de gallo.",
+          price: "$16",
+        },
+        {
+          name: "Maria's Chicken Special",
+          description: "Grilled chicken breast with steam broccoli, squash, zucchini and cheese dip. Served with rice and your choice of refried or black beans.",
+          price: "$17",
+        },
+        {
+          name: "Pollo Ranchero",
+          description: "Grilled chicken breast topped with grilled mushrooms, onions and cheese dip. Served with rice and choice of refried or black beans.",
+          price: "$17",
+        },
+        {
+          name: "Pollo a la Crema",
+          description: "Grilled chicken strips cooked with bell pepper and topped with our special creamy sauce. Served with rice, salad and pico de gallo.",
+          price: "$16",
+        },
+        {
+          name: "Pollo Fundido",
+          description: "Two flour fried tortilla with shredded chicken topped with cheese ranchero sauce. Served with rice, refried or black beans and salad.",
+          price: "$15",
+        },
+      ],
+    },
+    {
+      name: "Mariscos",
+      items: [
+        {
+          name: "Mojarra Frita",
+          description: "A whole tilapia fish fried to perfection. Served with rice salad.",
+          price: "$18",
+        },
+        {
+          name: "Add for Mojarra Frita",
+          description: "Diabla shrimp or mojo de ajo shrimp.",
+          price: "$8.00",
+        },
+        {
+          name: "Camarones Al Mojo",
+          description: "Grilled shrimp cooked with our garlic creamy sauce served with rice and salad.",
+          price: "$17.50",
+        },
+        {
+          name: "Camarones Mexicanos",
+          description: "Shrimp cooked with jalapeños peppers, onions, tomatoes, rice and beans, refried or black beans.",
+          price: "$18",
+        },
+        {
+          name: "Playa del Carmen",
+          description: "Grilled tilapia and shrimp, topped with our creamy crab seafood sauce, served with rice and salad.",
           price: "$19",
+        },
+        {
+          name: "Camarones a la Diabla",
+          description: "Grilled shrimp cooked with our Diabla sauce served with rice and salad.",
+          price: "$17.50",
+        },
+        {
+          name: "Maria's Shrimp Special",
+          description: "Grilled shrimp in butter pico de gallo and creamy ranchero sauce. Served with rice and salad.",
+          price: "$18",
+        },
+        {
+          name: "Coctel de Camaron",
+          description: "Boiled shrimp mix with pico de gallo, avocado and special tomato sauce.",
+          price: "$17.50",
+        },
+        {
+          name: "Seafood Chimichanga",
+          description: "Large rolled flour tortilla, fried or soft, filled with shrimp and crabmeat, covered with crab creamy sauce, served with rice and salad.",
+          price: "$18",
+        },
+        {
+          name: "Spicy Plate",
+          description: "Items marked spicy on the menu: Steak Mexicano, Chile Colorado, Camarones a la Diabla.",
+        },
+        {
+          name: "Notice",
+          description: "Cooked to order. Consuming raw or undercooked meats, poultry, seafood, shellfish or eggs may increase your risk of foodborne illness.",
+        },
+      ],
+    },
+    {
+      name: "Especiales",
+      items: [
+        {
+          name: "Maria's Bowl",
+          description: "A bowl filled with rice, lettuce, roasted corn, black beans, guacamole, and your choice of meat, topped with pico de gallo, sour cream and shredded cheese.",
+          prices: [
+            { size: "Veggie", price: "$13" },
+            { size: "Chicken", price: "$14" },
+            { size: "Steak", price: "$15" },
+            { size: "Shrimp", price: "$16" },
+          ],
+        },
+        {
+          name: "Fried Chimichanga",
+          description: "Two flour tortilla fried or soft filled with shredded beef or chicken topped with cheese dip, ranchero sauce and your choice of refried or black beans and salad.",
+          price: "$15",
+        },
+        {
+          name: "Flautas",
+          description: "Shredded chicken tinga 2, and shredded beef 2, topped with salsa verde, crema, pickled onions, queso Cotija, rice and beans.",
+          price: "$15",
+        },
+        {
+          name: "Special Rice",
+          description: "A bed of rice cooked with bell pepper, topped with cheese dip and choice of meat.",
+          prices: [
+            { size: "Chicken", price: "$16" },
+            { size: "Steak", price: "$17" },
+            { size: "Shrimp", price: "$18" },
+          ],
+        },
+        {
+          name: "Carne & Camaron",
+          description: "Grilled rib-eye steak with shrimp, onions and mushrooms. Served with rice, and your choice of refried beans or black beans.",
+          price: "$21",
+        },
+        {
+          name: "Quesabiria",
+          description: "Two grilled corn tortillas stuffed with cheese and our famous tender beef brisket cooked in Mexican spices, served with a side of its own beef broth, lime, cilantro, onions, and salsa.",
+          price: "$16",
+        },
+        {
+          name: "Pizzabirria",
+          description: "Two flour tortillas stuffed with cheese and our famous Adobo marinated shredded beef cooked in birria sauce, cilantro and onions. Served with beef consomé for dipping and tomatillo sauce.",
+          price: "$18",
+        },
+        {
+          name: "Ramen Soup Birria",
+          description: "Birria consomé, ramen noodle, chunks of tender birria, topped with onions, cilantro and cheese quesadilla for dipping.",
+          price: "$15",
+        },
+        {
+          name: "Pollo Con Camarón",
+          description: "Grilled chicken breast and shrimp cooked with pico de gallo. Served with rice and mixed vegetables.",
+          price: "$17",
+        },
+        {
+          name: "Pollo Con Chorizo",
+          description: "Grilled chicken strips with Mexican sausage. Topped with cheese dip and served with chicken enchilada and rice.",
+          price: "$16",
+        },
+        {
+          name: "Molcajete Cielo, Mar y Tierra",
+          description: "For two people. Chargrilled carne asada, Mexican sausage, chicken, and cactus, topped with an order of camarones al mojo, mozzarella cheese, green tomatillo sauce, cambray onions, avocado slices, chiles toreados fried green jalapeños peppers, tortillas and slices of queso fresco. Served with rice, refried or black beans and salad.",
+          price: "$40",
+        },
+      ],
+    },
+    {
+      name: "Create Your Own Combo",
+      items: [
+        {
+          name: "Combo Dinner",
+          description: "Served with two items, rice and your choice of black or refried beans. *Chile Poblano stuffed with cheese only. Choose From: Burrito | Enchilada | Taco | Chalupa | Tostada | Quesadilla | Tostaguac | Chile Poblano (Cheese Only). Fillings: Ground or Shredded Beef | Birria | Shredded Chicken Tinga | Beans and Cheese.",
+          price: "$13.75",
+        },
+        {
+          name: "Veggie Dinner",
+          description: "*Chile Poblano stuffed with cheese only. Choose From: Burrito | Enchilada | Taco | Chalupa | Quesadilla | Chile Poblano (Cheese Only). Fillings: Beans | Cheese | Mushrooms | Spinach.",
+          price: "$12.75",
+        },
+      ],
+    },
+    {
+      name: "Desserts",
+      items: [
+        {
+          name: "Sopapilla with Ice Cream",
+          description: "Fried flour tortilla, honey, butter and cinnamon.",
+          price: "$6.50",
+        },
+        {
+          name: "Flan",
+          description: "Homemade Mexican custard.",
+          price: "$7.50",
+        },
+        {
+          name: "Churros with Ice Cream",
+          description: "Fried twisted dough with sugar, cinnamon, honey, chocolate sauce and whipped cream.",
+          price: "$8.50",
+        },
+        {
+          name: "Fried Ice Cream",
+          description: "Scoop of vanilla ice cream deep-fried. Topped with honey, chocolate sauce and whipped cream.",
+          price: "$7.50",
+        },
+      ],
+    },
+    {
+      name: "Sodas",
+      items: [
+        {
+          name: "Sodas",
+          description: "Coke | Diet Coke | Coke Zero | Sprite | Mr Pibb | Orange Fanta | Ginger Ale | Lemonade | Iced Tea | Milk | OJ",
+          price: "$3",
+        },
+        {
+          name: "Specialty Drinks",
+          description: "Horchata | Jamaica | Jarritos",
+          price: "$4",
+        },
+      ],
+    },
+    {
+      name: "Kids",
+      description: "Includes children 10 and under with the option to pick one main item and one side. $8",
+      items: [
+        {
+          name: "Kids Main Items",
+          description: "Cheeseburger | Chicken Nuggets | Cheese Nachos | Mac & Cheese | Pizza | Taco | Cheese Quesadilla | Burrito | Enchilada",
+        },
+        {
+          name: "Kids Sides",
+          description: "Rice | Beans | Fries | Broccoli | Side of Fruit",
         },
       ],
     },
