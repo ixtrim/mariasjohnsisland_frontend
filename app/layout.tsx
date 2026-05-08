@@ -6,6 +6,7 @@ import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { GSAPProvider } from "@/components/gsap-provider";
+import { getGlobalOptions } from "@/lib/cms";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -44,11 +45,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const options = await getGlobalOptions();
+
   return (
     <html
       lang="en"
@@ -58,7 +61,7 @@ export default function RootLayout({
         <GSAPProvider>
           <Header />
           <main className="flex-1">{children}</main>
-          <Footer />
+          <Footer options={options} />
         </GSAPProvider>
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
